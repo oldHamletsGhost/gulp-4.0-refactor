@@ -5,7 +5,7 @@ is built to handle SCSS files only.
 # What It Handles
 The tasks included will handle all your scripts (ES6 compiling, compressing & mangling, concatenating all files, adding sourcemaps), 
 SCSS styles (autoprefixing, compressing, renaming to main.min.css) and compressing images (pngs, jpeg, jpg, svg & gif). Included 
-is the clean and bundle functions which will clear your set working directories and export your work files into a .zip respectively. 
+is the clean and bundle functions which will clear your set working directory and export your work files into a .zip respectively. 
 
 # server.js file included for localhosts
 A server.js file is included should you want to use a localhost to run your project. If you are not and want to use the command line
