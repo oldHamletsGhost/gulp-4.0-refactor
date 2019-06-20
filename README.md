@@ -30,10 +30,9 @@ Change this name to a name that adequately describes your project. This variable
 
     const projectName = 'myProject_';
 
-Change these paths so that they reference the appropriate paths. Be sure not to remove the asterix expressions as they are used
-to traverse all the file folders. "src" refers to the source directory and the "dest" is the destination. 
+Change the paths below so that they reference the appropriate directories. Be sure not to remove the asterix expressions as they are used to traverse all the file folders. "src" refers to the source directory and the "dest" is the destination. 
 
-The clean fucntion has only one property which is the reference to the parent folder of all your compressed/gulped files. This assumes you have  a common parent directory for all your dest references.
+The clean fucntion has only one property which is the reference to the parent folder of all your compressed/gulped files. This assumes you have a common parent directory for all your dest references.
 
     styles: {
         src: 'public/src/styles/**/*.scss',
