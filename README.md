@@ -33,29 +33,26 @@ Change this name to a name that adequately describes your project. This variable
 
 Change the paths below so that they reference the appropriate directories. Be sure not to remove the asterisk expressions as they are used to traverse all the file folders. "src" refers to the source directory and the "dest" is the destination. 
 
-The clean and bundle objects have only one "dir" property. The clean function points to the parent folder of all your compressed/gulped files. This assumes you have a common parent directory for all your dest references. 
-The bundle dir points to the project folder itself. Set this property to a path that you will want to compress into a zip.
+The clean and bundle objects have only one "dir" property. The clean object "dir" property points to the parent folder of all your compressed/gulped files. This assumes you have a common parent directory for all your dest references. 
+The bundle dir points to the project folder and all sub-folders. Set this property to a path that you will want to compress into a zip.
 
-    styles: {
-        src: 'public/src/styles/**/*.scss',
-        dest: 'public/assets/styles/'
-    },
-    
-    scripts: {
-        src: 'public/src/scripts/**/*.js',
-        dest: 'public/assets/scripts/'
-    },
-    
-    images: {
-        src: 'public/src/images/**/*.{png,jpeg,jpg,svg,gif}',
-        dest: 'public/assets/images/'
-    },
-    
-    bundle: {
-            dir: 'public/**/*'
-    },
-  
-    clean: {
-        dir: 'public/assets'
+    const paths = {
+        styles: {
+            src: 'public/src/styles/**/*.scss',
+            dest: 'public/assets/styles/'
+        },
+        scripts: {
+            src: 'public/src/scripts/**/*.js',
+            dest: 'public/assets/scripts/'
+        },
+        images: {
+            src: 'public/src/images/**/*.{png,jpeg,jpg,svg,gif}',
+            dest: 'public/assets/images/'
+        },
+        bundle: {
+                dir: 'public/**/*'
+        }, 
+        clean: {
+            dir: 'public/assets'
+        }
     }
-    
