@@ -2,7 +2,7 @@
 These files should give you a starting point for using Gulp ^4.0.0 in your projects. It should be noted that the styles function 
 is built to handle SCSS files.
 
-# what it handles
+# What It Handles
 The tasks included will handle all your scripts (ES6 compiling, compressing & mangling, concatenating all files, adding sourcemaps), 
 SCSS styles (autoprefixing, compressing, renaming to main.min.css) and compressing images (pngs, jpeg, jpg, svg & gif). Included 
 is the clean and bundle functions which will clear your set working directories and export your work files into a .zip respectively. 
@@ -21,7 +21,7 @@ If the root path for your project is not ./public/ or you do not want to use por
     rootPath: './public/',
     port: 3000
     
-# gulpfile.js variables you may need to update
+# gulpfile.js variables you may want to update
 
 The two variables in gulpfile.js you will likely change are projectName and paths.
 
