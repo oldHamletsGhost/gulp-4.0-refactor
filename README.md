@@ -14,7 +14,8 @@ and remove gulp-livereload from your package.json file and run npm install to be
 
 If you are using a localhost, livereload is included in the project so you can see your changes apply. You will need to add that 
 extension to your browser if you haven't already or add the livereload script to your index file:
-<script src="http://localhost:35729/livereload.js"></script>
+
+    <script src="http://localhost:35729/livereload.js"></script>
 
 If the root path for your project is not ./public/ or you do not want to use port 3000, change the server.js file accordingly:
 
