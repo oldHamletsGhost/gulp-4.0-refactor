@@ -52,10 +52,7 @@ function styles() {
         .pipe(autoPrefixer())
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(srcWrite())
-        .pipe(rename({
-            basename: 'main',
-            suffix: '.min'
-        }))
+        .pipe(rename({ basename: 'main', suffix: '.min'}))
         .pipe(dest(paths.styles.dest))
         .pipe(livereload());
 }
