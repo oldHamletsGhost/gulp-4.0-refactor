@@ -16,33 +16,23 @@ If you are using a localhost, livereload is included in the project so you can s
 extension to your browser if you haven't already or add the livereload script to your index file:
 <script src="http://localhost:35729/livereload.js"></script>
 
-If the root path for your project is not ./public/, change this in the server.js file:
-
-const server = new StaticServer({
+If the root path for your project is not ./public/ or you do not want to use port 3000, change the server.js file accordingly:
 
     rootPath: './public/',
     port: 3000
     
-});
-
-
-
-
 # gulpfile.js variables you may need to update
 
 The two variables in gulpfile.js you will likely change are projectName and paths.
 
 Change this name to a name that adequately describes your project.
 
-const projectName = 'myProject_';
+    const projectName = 'myProject_';
 
 Change these paths so that they reference the appropriate paths. Be sure not to remove the /**/*. part of the reference as it is used
 to traverse all the file folders. "src" refers to the source directory and the "dest" is the destination. 
 
-clean has only one property which is the reference to the parent folder of all your compressed/gulped files. This assumes you have 
-a common parent directory for all your dest references.
-
-const paths = {
+The clean fucntion has only one property which is the reference to the parent folder of all your compressed/gulped files. This assumes you have  a common parent directory for all your dest references.
 
     styles: {
         src: 'public/src/styles/**/*.scss',
@@ -63,4 +53,3 @@ const paths = {
         dir: 'public/assets'
     }
     
-};
