@@ -30,6 +30,9 @@ const paths = {
         src: 'public/src/images/**/*.{png,jpeg,jpg,svg,gif}',
         dest: 'public/assets/images/'
     },
+    bundle: {
+        dir: 'public/**/*'
+    },
     clean: {
         dir: 'public/assets'
     }
@@ -40,7 +43,7 @@ function clean() {
 }
 
 function bundle() {
-    return src('public/**/*')
+    return src(paths.bundle.dir)
         .pipe(zip(`${projectName}${new Date().getTime()}.zip`))
         .pipe(dest('./'))
 }

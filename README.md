@@ -4,8 +4,9 @@ is built to handle SCSS files only.
 
 # What It Handles
 The tasks included will handle all your scripts (ES6 compiling, compressing & mangling, concatenating all files, adding sourcemaps), 
-SCSS styles (autoprefixing, compressing, renaming to main.min.css) and compressing images (pngs, jpeg, jpg, svg & gif). Included 
-is the clean and bundle functions which will clear your set working directory and export your work files into a .zip respectively. 
+SCSS styles (autoprefixing, compressing, renaming to main.min.css) and compressing images (pngs, jpeg, jpg, svg & gif). A watcher method will
+track all changes made to your styles, scripts or images directory and run the appropriate task. Also included is the clean and bundle functions 
+which will clear your set working directory and export your work files into a .zip respectively. 
 
 # server.js file included for localhosts
 A server.js file is included should you want to use a localhost to run your project. If you are not and want to use the command line
@@ -30,9 +31,10 @@ Change this name to a name that adequately describes your project. This variable
 
     const projectName = 'myProject_';
 
-Change the paths below so that they reference the appropriate directories. Be sure not to remove the asterix expressions as they are used to traverse all the file folders. "src" refers to the source directory and the "dest" is the destination. 
+Change the paths below so that they reference the appropriate directories. Be sure not to remove the asterisk expressions as they are used to traverse all the file folders. "src" refers to the source directory and the "dest" is the destination. 
 
-The clean fucntion has only one property which is the reference to the parent folder of all your compressed/gulped files. This assumes you have a common parent directory for all your dest references.
+The clean and bundle objects have only one "dir" property. The clean function points to the parent folder of all your compressed/gulped files. This assumes you have a common parent directory for all your dest references. 
+The bundle dir points to the project folder itself. Set this property to a path that you will want to compress into a zip.
 
     styles: {
         src: 'public/src/styles/**/*.scss',
@@ -49,6 +51,10 @@ The clean fucntion has only one property which is the reference to the parent fo
         dest: 'public/assets/images/'
     },
     
+    bundle: {
+            dir: 'public/**/*'
+    },
+  
     clean: {
         dir: 'public/assets'
     }
