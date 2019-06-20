@@ -1,6 +1,6 @@
 # gulp-4.0-refactor
 These files should give you a starting point for using Gulp ^4.0.0 in your projects. It should be noted that the styles function 
-is built to handle SCSS files.
+is built to handle SCSS files only.
 
 # What It Handles
 The tasks included will handle all your scripts (ES6 compiling, compressing & mangling, concatenating all files, adding sourcemaps), 
