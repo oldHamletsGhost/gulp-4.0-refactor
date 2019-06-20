@@ -26,11 +26,11 @@ If the root path for your project is not ./public/ or you do not want to use por
 
 The two variables in gulpfile.js you will likely change are projectName and paths.
 
-Change this name to a name that adequately describes your project.
+Change this name to a name that adequately describes your project. This variable is used for the bundle function which exports your project as a zip. After the underscore, a timestamp is applied so that it doesn't overwrite any previous versions.
 
     const projectName = 'myProject_';
 
-Change these paths so that they reference the appropriate paths. Be sure not to remove the /**/*. part of the reference as it is used
+Change these paths so that they reference the appropriate paths. Be sure not to remove the asterix expressions as they are used
 to traverse all the file folders. "src" refers to the source directory and the "dest" is the destination. 
 
 The clean fucntion has only one property which is the reference to the parent folder of all your compressed/gulped files. This assumes you have  a common parent directory for all your dest references.
